@@ -2,7 +2,7 @@
   功能是: 对一个接口类型的属性,可以注入多个值或者一个值,当通过依赖注入完成后,调用接口类型的方法时,则会默认会调用所有实现这个接口类的方法或者调用指定的某个实现类的方法
   
 spring完成收集注解和对注解的值进行依赖注入是又两个PostProcessor来完成,分别为InstantiationAwareBeanPostProcessor,MergedBeanDefinitionPostProcessor接口，
-我们知道Autowired注解是通过AutowiredAnnotationBeanPostProcessor这个注解来完成解析和依赖注入的,那我们依葫芦画瓢,将该类的所有代码全部复制过来,新建一个新的自定义di的注解类,
+我们知道Autowired注解是通过AutowiredAnnotationBeanPostProcessor这个注解来完成解析和依赖注入的,那我们依葫芦画瓢,将该类的所有代码全部复制过来,新建一个新的自定义di的处理类,
 将构造方法的Autowired注解更换成自己定义的注解
    public DiAnnotationBeanPostProcessor() {
         this.diAnnotationTypes.add(DiAnnotation.class); //自定义注解信息
