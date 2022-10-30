@@ -1,0 +1,1 @@
+com.spring.customer.di.InvokerHandler=com.spring.customer.di.impl.InvokerHandlerAllofImpl,com.spring.customer.di.impl.InvokerHandlerSimpleImpl
